@@ -1,6 +1,5 @@
 import csv
-import pathlib
-from pathlib import Path
+import os
 
 
 from django.core.management.base import BaseCommand
@@ -12,8 +11,8 @@ class Command(BaseCommand):
         pass
 
     def handle(self, *args, **options):
-        file = Path('venv', 'phones.csv')
-        with open(file, 'r') as file:
+        path = '/home/roman/Desktop/Phone_app/phones.csv'
+        with open(path, 'r') as file:
             phones = list(csv.DictReader(file, delimiter=';'))
 
         for phone in phones:
