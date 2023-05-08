@@ -10,7 +10,7 @@ class Command(BaseCommand):
         pass
 
     def handle(self, *args, **options):
-        path = '/home/roman/Desktop/Phone_app/phones.csv'
+        path = '/home/roman/Phone_app/phones.csv'
         with open(path, 'r') as file:
             phones = list(csv.DictReader(file, delimiter=';'))
 
