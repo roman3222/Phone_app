@@ -1,5 +1,4 @@
 import csv
-import os
 
 
 from django.core.management.base import BaseCommand
@@ -30,4 +29,3 @@ class Command(BaseCommand):
                 release_date=release_date,
                 lte_exists=lte_exists,
             )
-

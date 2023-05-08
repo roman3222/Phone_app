@@ -1,0 +1,13 @@
+name: Тестирование и развёртывание проекта
+
+
+on:
+  push:
+    branches: [lower]
+
+
+jobs:
+  tests:
+    runs-on: ubuntu-20.04
+    env:
+      SECRET_KEY: ${{secrets.SECRET_KEY}}
